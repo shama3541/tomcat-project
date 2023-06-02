@@ -21,3 +21,17 @@ spec:
         ports:
         - containerPort: 80
           protocol: TCP
+         
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcat-svc
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+  selector:
+    env: tomcat
+  type: NodePort
