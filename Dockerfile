@@ -1,0 +1,2 @@
+FROM bitnami/tomcat
+ENV ALLOW_EMPTY_PASSWORD=yes
