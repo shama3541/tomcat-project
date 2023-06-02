@@ -37,7 +37,7 @@ pipeline {
       stage('Deploy app') {
          steps {
             sh 'kubectl apply -f tomcat-deploy.yaml'
-            sh 'sleep 60'
+            sh 'sleep 30'
             sh 'kubectl apply -f tomcat-svc.yaml'
          }
       }
