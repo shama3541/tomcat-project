@@ -34,4 +34,4 @@ spec:
       targetPort: 8080
   selector:
     env: tomcat
-  type: NodePort
+#  type: NodePort
