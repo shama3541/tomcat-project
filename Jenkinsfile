@@ -27,7 +27,7 @@ pipeline {
              }
         stage('Docker image push') {
            steps {
-                 withCredentials([usernamePassword(credentialsId: '114b914f-b8b1-4ef2-a1b4-93337429d550', passwordVariable: 'Password', usernameVariable: 'Username')]) {
+                 withCredentials([usernamePassword(credentialsId: 'aa2eeba3-0ea5-4f43-9aa0-1b489f5180f5', passwordVariable: 'Password', usernameVariable: 'Username')]) {
                  sh "sudo docker login -u ${env.Username} -p ${env.Password}"
                  sh "sudo docker image tag mytomcat-image shama3541/mytomcat-image:test"
                  sh "sudo docker image push shama3541/mytomcat-image:test" 
